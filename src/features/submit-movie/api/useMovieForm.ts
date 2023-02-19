@@ -6,7 +6,9 @@ export const genreOption = [
   { id: "action", display: "アクション" },
   { id: "fantasy", display: "ファンタジー" },
   { id: "romance", display: "ラブロマンス" },
+  { id: "epic", display: "歴史" },
 ] as const;
+
 type GenreOption = typeof genreOption[number];
 
 export const mediaOption = [
@@ -32,7 +34,7 @@ const defaultValues: UseMovieFormInputType = {
     id: "romance",
     display: "ラブロマンス",
   },
-  media: [],
+  media: [...mediaOption],
 };
 
 export const useMovieForm = () => {
